@@ -73,7 +73,6 @@ class BasePage:
                            evt.initMouseEvent("dragend", true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
                            source.dispatchEvent(evt);
                        """, element, target)
-        #ActionChains(self.driver).drag_and_drop(element, target).perform()
 
     @allure.step("Переход к элементу и клик на него")
     def move_to_element_and_click(self, locator):
