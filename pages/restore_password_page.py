@@ -1,7 +1,7 @@
 import allure
 
-from pages.base_page import BasePage
 from locators.locators import RestorePasswordPageLocators
+from pages.base_page import BasePage
 
 
 class RestorePasswordPage(BasePage):

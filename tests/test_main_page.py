@@ -1,4 +1,5 @@
 import allure
+
 from data.urls import Urls, Endpoints
 from pages.main_page import MainPage, HeaderPage
 

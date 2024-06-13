@@ -1,6 +1,7 @@
 class Urls:
     MAIN_URL = 'https://stellarburgers.nomoreparties.site/'
 
+
 class Endpoints:
     FEED = 'feed'  # Лента заказов
     LOGIN = 'login'  # Авторизация

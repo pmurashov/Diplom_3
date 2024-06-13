@@ -1,4 +1,5 @@
 import allure
+
 from data.urls import Urls, Endpoints
 from pages.login_page import LoginPage
 from pages.main_page import HeaderPage
@@ -20,7 +21,7 @@ class TestMyAccountPage:
         my_account = MyAccountPage(driver)
         header.click_on_my_account_button()
         assert my_account.check_profile_area_form_visible() and my_account.get_current_url() == (
-                    Urls.MAIN_URL + Endpoints.MY_ACCOUNT)
+                Urls.MAIN_URL + Endpoints.MY_ACCOUNT)
 
     @allure.title('Проверка перехода в "История Заказов"')
     @allure.description('''
@@ -38,7 +39,7 @@ class TestMyAccountPage:
         header.click_on_my_account_button()
         my_account.click_on_orders_history_button()
         assert my_account.check_profile_area_form_visible() and my_account.get_current_url() == (
-                    Urls.MAIN_URL + Endpoints.ORDER_HISTORY)
+                Urls.MAIN_URL + Endpoints.ORDER_HISTORY)
 
     @allure.title('Проверка выхода из аккаунта"')
     @allure.description('''
@@ -57,4 +58,4 @@ class TestMyAccountPage:
         header.click_on_my_account_button()
         my_account.click_on_logout_button()
         assert login_page.check_authorization_form_verification() and login_page.get_current_url() == (
-                    Urls.MAIN_URL + Endpoints.LOGIN)
+                Urls.MAIN_URL + Endpoints.LOGIN)

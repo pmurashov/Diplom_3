@@ -12,7 +12,8 @@ class MainPageLocators:
     CONSTRUCTOR_FORM = (
         By.XPATH, ".//div[@class = 'BurgerIngredients_ingredients__menuContainer__Xu3Mo']")  # Форма конструктора
     ORDER_BUTTON = (By.XPATH, ".//button[text() = 'Оформить заказ']")  # Кнопка оформить заказ
-    FLUORESCENT_BUN_BUTTON = (By.XPATH, ".//img[@src='https://code.s3.yandex.net/react/code/bun-01.png']")  # Кнопка флюорисцентной булки
+    FLUORESCENT_BUN_BUTTON = (
+    By.XPATH, ".//img[@src='https://code.s3.yandex.net/react/code/bun-01.png']")  # Кнопка флюорисцентной булки
     POPUP_FORM_CLOSE_BUTTON = (By.XPATH, '//button[contains(@class,"close")]')  # Крестик на модульном окне
     INGREDIENT_BUTTON = (By.XPATH, ".//p[contains(@class, 'counter_counter__num__3nue1')]")  # Счетчик ингредиента
     ORDER_FORM = (By.XPATH, ".//div[@class = 'Modal_modal__container__Wo2l_']")  # Форма оформленного заказа

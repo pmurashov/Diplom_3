@@ -1,9 +1,10 @@
 import allure
 import pytest
+
+from helpers.helpers import Order
+from locators.locators import OrderFeedLocators
 from pages.main_page import HeaderPage
 from pages.order_feed_page import OrderFeedPage
-from locators.locators import OrderFeedLocators
-from helpers.helpers import Order
 
 
 class TestOrderFeedPage:
@@ -64,7 +65,8 @@ class TestOrderFeedPage:
         assert user_order in orders_history_in_feed
 
     @allure.title('При создании нового заказа счетчик Выполнено за всё время / Выполнено за сегодня увеличивается')
-    @pytest.mark.parametrize('counter', [OrderFeedLocators.TODAY_ORDERS_COUNTER, OrderFeedLocators.TOTAL_ORDERS_COUNTER])
+    @pytest.mark.parametrize('counter',
+                             [OrderFeedLocators.TODAY_ORDERS_COUNTER, OrderFeedLocators.TOTAL_ORDERS_COUNTER])
     def test_update_counter_orders(self, driver, create_new_user, login, counter):
         order = Order()
         header = HeaderPage(driver)

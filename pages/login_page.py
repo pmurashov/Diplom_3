@@ -1,6 +1,7 @@
 import allure
-from pages.base_page import BasePage
+
 from locators.locators import AuthorizationPageLocators
+from pages.base_page import BasePage
 
 
 class LoginPage(BasePage):
