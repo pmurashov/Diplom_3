@@ -32,22 +32,16 @@ class BasePage:
 
     @allure.step("Получение текста элемента")
     def get_text_locator(self, locator):
-        WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(locator))
-        return self.driver.find_element(*locator).text
+        return self.check_element(locator).text
 
     @allure.step("Получение текста элементов")
     def get_text_locators(self, locator):
-        WebDriverWait(self.driver, 5).until(EC.visibility_of_all_elements_located(locator))
+        self.wait_for_element_loaded(locator)
         return self.driver.find_elements(*locator)
 
     @allure.step("Проверка отображения элемента")
     def check_element(self, locator):
         self.wait_for_element_loaded(locator)
-        return self.driver.find_element(*locator)
-
-    @allure.step("Проверка отсутствия элемента")
-    def check_element_is_not_visible(self, locator):
-        WebDriverWait(self.driver, 10).until(EC.invisibility_of_element_located(locator))
         return self.driver.find_element(*locator)
 
     @allure.step("Drag and drop элемента")

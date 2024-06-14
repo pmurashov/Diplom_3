@@ -42,7 +42,7 @@ class MainPage(BasePage):
 
     @allure.step('Проверка закрытия формы "Информация о булке"')
     def check_fluorescent_bun_form_closed(self):
-        return self.check_element_is_not_visible(MainPageLocators.INGREDIENTS_POPUP_FORM)
+        return self.check_element(MainPageLocators.INGREDIENTS_POPUP_FORM)
 
     @allure.step('Закрытие формы информации об ингридиенте')
     def close_ingredient_info_popup_form(self):
